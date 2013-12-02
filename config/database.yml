@@ -24,6 +24,6 @@ production:
   database: 'd8ru1mt6sp5lko'
   username: 'zwnlgbnaebjeuk'
   password: 'bORlhdlPefzGFnfW9Zr2-2U3Ir'
-  port: 34532
+  port: 5432
   pool: 5
   timeout: 5000
