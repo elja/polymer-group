@@ -7,6 +7,7 @@ gem 'rails', '3.2.15'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'zeus'
 end
 
 group :production do
@@ -48,7 +49,7 @@ gem 'refinerycms', '~> 2.1.0'
 # Optionally, specify additional Refinery CMS Extensions here:
 
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
-gem 'refinerycms-ckeditor'
+gem 'refinerycms-ckeditor', git: 'https://github.com/botandrose/refinerycms-ckeditor'
 gem 'refinerycms-i18n'
 
 #  gem 'refinerycms-blog', '~> 2.1.0'

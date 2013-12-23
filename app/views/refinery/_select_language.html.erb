@@ -1,0 +1,15 @@
+<ul class="loginbar pull-right">
+  <li>
+    <i class="icon-globe"></i>
+    <a><%= t('front.language') %></a>
+    <ul class="lenguages">
+      <% Refinery::I18n.config.frontend_locales.each do |locale| %>
+        <%= content_tag(:li, class: ::I18n.locale == locale ? 'active' : '') do %>
+          <%= link_to "/#{locale.to_s + request.path}", { :title => Refinery::I18n.locales[locale] } do %>
+            <%= Refinery::I18n.locales[locale] %><% if ::I18n.locale == locale %><i class="icon-ok"></i><% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </li>
+</ul>

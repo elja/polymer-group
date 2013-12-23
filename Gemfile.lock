@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/botandrose/refinerycms-ckeditor
+  revision: bcfde5802908759c8c5429b24f13a0a6bb066c91
+  specs:
+    refinerycms-ckeditor (0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,6 +76,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
     multi_json (1.8.2)
     orm_adapter (0.5.0)
@@ -120,7 +127,6 @@ GEM
       actionmailer (>= 3.1.11, < 3.3, != 3.2.9, != 3.2.8, != 3.2.7, != 3.2.6, != 3.2.5, != 3.2.4, != 3.2.3, != 3.2.2, != 3.2.11, != 3.2.10, != 3.2.1, != 3.2.0)
       devise (~> 2.2.3)
       refinerycms-core (= 2.1.1)
-    refinerycms-ckeditor (0.2.0)
     refinerycms-core (2.1.1)
       actionpack (>= 3.1.11, < 3.3, != 3.2.9, != 3.2.8, != 3.2.7, != 3.2.6, != 3.2.5, != 3.2.4, != 3.2.3, != 3.2.2, != 3.2.11, != 3.2.10, != 3.2.1, != 3.2.0)
       activerecord (>= 3.1.11, < 3.3, != 3.2.9, != 3.2.8, != 3.2.7, != 3.2.6, != 3.2.5, != 3.2.4, != 3.2.3, != 3.2.2, != 3.2.11, != 3.2.10, != 3.2.1, != 3.2.0)
@@ -179,6 +185,8 @@ GEM
     warden (1.2.3)
       rack (>= 1.0)
     will_paginate (3.0.5)
+    zeus (0.13.3)
+      method_source (>= 0.6.7)
 
 PLATFORMS
   ruby
@@ -190,8 +198,9 @@ DEPENDENCIES
   rails (= 3.2.15)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
-  refinerycms-ckeditor
+  refinerycms-ckeditor!
   refinerycms-i18n
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  zeus
