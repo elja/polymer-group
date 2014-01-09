@@ -28,6 +28,15 @@ end
 
 gem 'jquery-rails'
 
+#for weather support
+#gem 'barometer'
+
+#for currency rates
+#gem 'savon', '~> 2.3.0'
+
+#for cron support
+gem 'whenever', :require => false
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -49,7 +58,8 @@ gem 'refinerycms', '~> 2.1.0'
 # Optionally, specify additional Refinery CMS Extensions here:
 
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
-gem 'refinerycms-ckeditor', git: 'https://github.com/botandrose/refinerycms-ckeditor'
+gem 'refinerycms-photo-gallery', path: 'vendor'
+gem 'refinerycms-image_slideshows', path: 'vendor'
 gem 'refinerycms-i18n'
 
 #  gem 'refinerycms-blog', '~> 2.1.0'
