@@ -37,9 +37,6 @@ gem 'jquery-rails'
 #for google maps
 gem 'gmaps4rails'
 
-#for contact us
-gem 'contact_us', '~> 0.5.1'
-
 #for cron support
 gem 'whenever', :require => false
 
@@ -60,6 +57,7 @@ gem 'whenever', :require => false
 
 # Refinery CMS
 gem 'refinerycms', '~> 2.1.0'
+gem 'refinerycms-inquiries', '~> 2.1.0'
 
 # Optionally, specify additional Refinery CMS Extensions here:
 
@@ -71,6 +69,5 @@ gem 'refinerycms-i18n'
 
 
 #  gem 'refinerycms-blog', '~> 2.1.0'
-#  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'

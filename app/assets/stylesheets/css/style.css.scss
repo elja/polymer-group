@@ -562,6 +562,11 @@ a.thumbnail {
   a {
     color: #777;
   }
+
+  a.active {
+    color: #72c02c;
+  }
+
   li {
     &.active, a:hover {
       color: #72c02c;

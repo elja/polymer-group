@@ -69,6 +69,7 @@ GEM
       rack
     erubis (2.7.0)
     execjs (2.0.2)
+    filters_spam (0.3)
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
     globalize (3.0.1)
@@ -159,6 +160,10 @@ GEM
     refinerycms-images (2.1.1)
       dragonfly (~> 0.9.14)
       refinerycms-core (= 2.1.1)
+    refinerycms-inquiries (2.1.0)
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 2.1.0)
+      refinerycms-settings (~> 2.1.0)
     refinerycms-pages (2.1.1)
       awesome_nested_set (~> 2.1.3)
       babosa (!= 0.3.6)
@@ -221,6 +226,7 @@ DEPENDENCIES
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-i18n
+  refinerycms-inquiries (~> 2.1.0)
   refinerycms-photo-gallery!
   refinerycms-settings
   refinerycms-sl-snippets (~> 1.1.0)
