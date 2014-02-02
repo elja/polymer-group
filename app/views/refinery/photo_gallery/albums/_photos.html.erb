@@ -1,0 +1,23 @@
+<% cache "refinery/photo_gallery/albums/#{@page.album.id}/page/#{params[:page]}" do %>
+    <% photos_for_page = @page.photos_for_page(params[:page]) %>
+    <% photos_for_page.each_slice(4).with_index do |batch, top_index| %>
+        <div class="row margin-bottom-20">
+          <% batch.each_with_index do |photo, index| %>
+              <div class="col-md-3 col-sm-6">
+                <%= link_to photo.file.single.url, {
+                        :class => "thumbnail fancybox-button zoomer",
+                        :data => {:rel => 'fancybox-button'},
+                        :title => photo.title} do %>
+                    <%= content_tag(:span, class: 'overlay-zoom') do %>
+                        <%= image_tag photo.file.single.url, class: 'img-responsive' %>
+                        <div class="zoom-icon"></div>
+                    <% end %>
+                <% end %>
+              </div>
+          <% end %>
+          </div>
+    <% end %>
+
+    <%= will_paginate photos_for_page %>
+<% end %>
+

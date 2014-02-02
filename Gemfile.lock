@@ -1,8 +1,6 @@
 PATH
   remote: vendor
   specs:
-    refinerycms-image_slideshows (2.0.2)
-      refinerycms-core (~> 2.1.0)
     refinerycms-photo-gallery (0.1.2)
       carrierwave (= 0.6.2)
       mime-types
@@ -77,6 +75,7 @@ GEM
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       paper_trail (~> 2)
+    gmaps4rails (2.1.1)
     hike (1.2.3)
     i18n (0.6.5)
     journey (1.0.4)
@@ -173,6 +172,8 @@ GEM
       refinerycms-core (= 2.1.1)
     refinerycms-settings (2.1.1)
       refinerycms-core (~> 2.1.1)
+    refinerycms-sl-snippets (1.1.1)
+      refinerycms-pages (~> 2.1.0.dev)
     routing-filter (0.3.1)
       actionpack
     sass (3.2.12)
@@ -213,14 +214,16 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  gmaps4rails
   jquery-rails
   pg
   rails (= 3.2.15)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-i18n
-  refinerycms-image_slideshows!
   refinerycms-photo-gallery!
+  refinerycms-settings
+  refinerycms-sl-snippets (~> 1.1.0)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

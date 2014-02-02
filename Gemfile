@@ -34,6 +34,12 @@ gem 'jquery-rails'
 #for currency rates
 #gem 'savon', '~> 2.3.0'
 
+#for google maps
+gem 'gmaps4rails'
+
+#for contact us
+gem 'contact_us', '~> 0.5.1'
+
 #for cron support
 gem 'whenever', :require => false
 
@@ -57,10 +63,12 @@ gem 'refinerycms', '~> 2.1.0'
 
 # Optionally, specify additional Refinery CMS Extensions here:
 
+gem 'refinerycms-settings'
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 gem 'refinerycms-photo-gallery', path: 'vendor'
-gem 'refinerycms-image_slideshows', path: 'vendor'
+gem 'refinerycms-sl-snippets', '~> 1.1.0', :require => 'refinerycms-snippets'
 gem 'refinerycms-i18n'
+
 
 #  gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'

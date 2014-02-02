@@ -1,1 +1,31 @@
-<%= render '/refinery/content_page' %>
+<%= content_for :header do %>
+    <div class="header margin-bottom-20">
+      <%= render "/refinery/header" %>
+    </div>
+<% end %>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <% if part = @page.part_with_title(:slideshow) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
+      </div>
+      <div class="col-md-3">
+        <% if part = @page.part_with_title(:right_column) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <% if part = @page.part_with_title(:body) %>
+          <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+          <%= presenter.wrapped_html %>
+      <% end %>
+
+      <%= render "/refinery/photo_gallery/albums/show" %>
+    </div>
+</div>

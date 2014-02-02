@@ -1,0 +1,19 @@
+<div class="container">
+    <%= content_for :breadcrumbs do %>
+        <div class="breadcrumbs margin-bottom-40">
+          <%= render 'refinery/breadcrumbs' %>
+        </div>
+    <% end %>
+
+    <div class="row">
+      <div class="headline"><h2><%= @page.title %></h2></div>
+      <% if @page.content_for?(:body) %>
+          <% presenter = Refinery::Pages::PagePartSectionPresenter.new(@page.part_with_title(:body)) %>
+          <%= presenter.wrapped_html %>
+      <% end %>
+
+      <%= render "/refinery/photo_gallery/albums/show" %>
+    </div>
+</div>
+
+

@@ -13,7 +13,7 @@ a {
 /*Main Parallax Sldier*/
 
 .da-slide h2 i {
-  background: url(../../plugins/parallax-slider/img/bg-heading.png) repeat;
+  background: image-url('bg-heading.png') repeat;
 }
 
 /*Sequence Parallax Sldier*/
@@ -93,7 +93,7 @@ a {
 
 .bx-wrapper {
   .bx-prev, .bx-next {
-    background-image: url(../../plugins/bxslider/images/controls.png);
+    background-image: image-url('controls.png');
   }
 }
 

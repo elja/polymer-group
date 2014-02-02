@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140109192430) do
+ActiveRecord::Schema.define(:version => 20140113215040) do
 
   create_table "refinery_album_pages", :force => true do |t|
     t.integer "album_id"
@@ -21,6 +21,28 @@ ActiveRecord::Schema.define(:version => 20140109192430) do
 
   add_index "refinery_album_pages", ["album_id"], :name => "index_refinery_album_pages_on_album_id"
   add_index "refinery_album_pages", ["page_id"], :name => "index_refinery_album_pages_on_page_id"
+
+  create_table "refinery_image_page_translations", :force => true do |t|
+    t.integer  "refinery_image_page_id"
+    t.string   "locale",                 :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.text     "caption"
+  end
+
+  add_index "refinery_image_page_translations", ["locale"], :name => "index_refinery_image_page_translations_on_locale"
+  add_index "refinery_image_page_translations", ["refinery_image_page_id"], :name => "index_186c9a170a0ab319c675aa80880ce155d8f47244"
+
+  create_table "refinery_image_pages", :force => true do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text    "caption"
+    t.string  "page_type", :default => "page"
+  end
+
+  add_index "refinery_image_pages", ["image_id"], :name => "index_refinery_image_pages_on_image_id"
+  add_index "refinery_image_pages", ["page_id"], :name => "index_refinery_image_pages_on_page_id"
 
   create_table "refinery_image_slides", :force => true do |t|
     t.string   "title"
@@ -198,6 +220,24 @@ ActiveRecord::Schema.define(:version => 20140109192430) do
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
 
+  create_table "refinery_snippet_translations", :force => true do |t|
+    t.integer  "refinery_snippet_id"
+    t.string   "locale",              :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.text     "body"
+  end
+
+  add_index "refinery_snippet_translations", ["locale"], :name => "index_refinery_snippet_translations_on_locale"
+  add_index "refinery_snippet_translations", ["refinery_snippet_id"], :name => "index_refinery_snippet_translations_on_refinery_snippet_id"
+
+  create_table "refinery_snippets", :force => true do |t|
+    t.string   "title",      :limit => 36, :null => false
+    t.text     "body"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
     t.string  "name"
@@ -238,5 +278,17 @@ ActiveRecord::Schema.define(:version => 20140109192430) do
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "id_type_index_on_seo_meta"
+
+  create_table "snippets_page_parts", :force => true do |t|
+    t.integer  "snippet_id",                      :null => false
+    t.integer  "page_part_id",                    :null => false
+    t.integer  "position",     :default => 0,     :null => false
+    t.boolean  "before_body",  :default => false, :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "snippets_page_parts", ["page_part_id"], :name => "index_snippets_page_parts_on_page_part_id"
+  add_index "snippets_page_parts", ["snippet_id"], :name => "index_snippets_page_parts_on_snippet_id"
 
 end
