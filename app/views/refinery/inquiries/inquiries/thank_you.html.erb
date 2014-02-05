@@ -1,7 +1,7 @@
 <%= content_for :breadcrumbs do %>
     <div class="breadcrumbs">
       <div class="container">
-        <h1 class="pull-left">Контакты</h1>
+        <h1 class="pull-left"><%= @page.ancestors.last.title %></h1>
         <ul class="pull-right breadcrumb">
           <% if home_page %>
               <li><a href="/"><%= home_page.title %></a></li>

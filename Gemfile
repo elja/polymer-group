@@ -6,6 +6,11 @@ gem 'rails', '3.2.15'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
+  gem 'capistrano', '~> 3.1.0'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+
   gem 'sqlite3'
   gem 'zeus'
 end
