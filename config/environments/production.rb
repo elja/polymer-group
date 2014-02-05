@@ -62,7 +62,7 @@ PolymerGroup::Application.configure do
 
       "page-snippet-picker.js",
       "page-snippet-picker.css",
-      "part-snippet-select.js"
+      "part-snippets-select.js"
   ]
 
   # Disable delivery errors, bad email addresses will be ignored
