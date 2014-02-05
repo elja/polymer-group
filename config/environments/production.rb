@@ -53,7 +53,12 @@ PolymerGroup::Application.configure do
       "wymeditor/skins/refinery/*",
       "wymeditor/skins/refinery/**/*",
       "modernizr-min.js",
-      "admin.js"
+      "admin.js",
+      "photo_gallery/*",
+      "photo_gallery/**/*",
+      "page-snipper-picker.js",
+      "page-snipper-picker.css",
+      "page-snipper-select.js",
   ]
 
   # Disable delivery errors, bad email addresses will be ignored
