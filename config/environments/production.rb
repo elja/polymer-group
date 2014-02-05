@@ -60,9 +60,9 @@ PolymerGroup::Application.configure do
       "photo_gallery/*",
       "photo_gallery/**/*",
 
-      "page-snipper-picker.js",
-      "page-snipper-picker.css",
-      "page-snipper-select.js",
+      "page-snippet-picker.js",
+      "page-snippet-picker.css",
+      "part-snippet-select.js"
   ]
 
   # Disable delivery errors, bad email addresses will be ignored
