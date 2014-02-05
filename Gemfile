@@ -35,6 +35,9 @@ end
 
 gem 'jquery-rails'
 
+#for dragonfly
+gem 'rack-cache', :require => 'rack/cache'
+
 #for weather support
 #gem 'barometer'
 
