@@ -257,6 +257,7 @@ DEPENDENCIES
   gmaps4rails
   jquery-rails
   pg
+  rack-cache
   rails (= 3.2.15)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
