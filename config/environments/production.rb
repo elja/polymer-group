@@ -49,13 +49,17 @@ PolymerGroup::Application.configure do
    config.assets.precompile += [
       "refinery/*",
       "refinery/icons/*",
+
       "wymeditor/lang/*",
       "wymeditor/skins/refinery/*",
       "wymeditor/skins/refinery/**/*",
+
       "modernizr-min.js",
       "admin.js",
+
       "photo_gallery/*",
       "photo_gallery/**/*",
+
       "page-snipper-picker.js",
       "page-snipper-picker.css",
       "page-snipper-select.js",
