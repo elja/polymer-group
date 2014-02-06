@@ -39,7 +39,7 @@ Refinery::Images.configure do |config|
   # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
   # config.dragonfly_secret = "d5d78641c6760be0afd954143e9ec9cd262b1e4ba8521b60"
   # If you decide to trust file extensions replace :ext below with :format
-  # config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
+  config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
   # config.dragonfly_url_host = ""
   # config.datastore_root_path = "/home/elja/Work/Phill/polymer-group/public/system/refinery/images"
   # config.trust_file_extensions = false

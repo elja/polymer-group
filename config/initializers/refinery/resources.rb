@@ -21,7 +21,7 @@ Refinery::Resources.configure do |config|
   # This is where in the middleware stack to insert the Dragonfly middleware
   # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
   # config.dragonfly_secret = "d5d78641c6760be0afd954143e9ec9cd262b1e4ba8521b60"
-  # config.dragonfly_url_format = "/system/resources/:job/:basename.:format"
+  config.dragonfly_url_format = "/system/resources/:job/:basename.:format"
   # config.dragonfly_url_host = ""
   # config.datastore_root_path = "/home/elja/Work/Phill/polymer-group/public/system/refinery/resources"
   # config.content_disposition = :attachment
