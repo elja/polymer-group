@@ -60,6 +60,9 @@ PolymerGroup::Application.configure do
       "photo_gallery/*",
       "photo_gallery/**/*",
 
+      "refinery/photo_gallery/*",
+      "refinery/photo_gallery/**/*",
+
       "page-snippet-picker.js",
       "page-snippet-picker.css",
       "part-snippets-select.js"
