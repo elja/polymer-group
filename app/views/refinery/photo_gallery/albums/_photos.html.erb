@@ -9,7 +9,7 @@
                         :data => {:rel => 'fancybox-button'},
                         :title => photo.title} do %>
                     <%= content_tag(:span, class: 'overlay-zoom') do %>
-                        <%= image_tag photo.file.single.url, class: 'img-responsive' %>
+                        <%= image_tag photo.file.preview.url, class: 'img-responsive' %>
                         <div class="zoom-icon"></div>
                     <% end %>
                 <% end %>
@@ -18,6 +18,8 @@
           </div>
     <% end %>
 
-    <%= will_paginate photos_for_page %>
+    <div class="text-right">
+      <%= will_paginate photos_for_page %>
+    </div>
 <% end %>
 
