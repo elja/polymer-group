@@ -9,17 +9,26 @@
       <div class="headline"><h2><%= @page.title %></h2></div>
 
       <div class="col-md-6 md-margin-bottom-40">
-        <%= raw @page.content_for(:body) %>
+        <% if part = @page.part_with_title(:body) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
       </div>
 
       <div class="col-md-6">
-        <%= raw @page.content_for(:slideshow) %>
+        <% if part = @page.part_with_title(:slideshow) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
       </div>
     </div>
 
       <div class="row">
         <div class="col-md-12">
-          <%= raw @page.content_for(:bottom_body) %>
+          <% if part = @page.part_with_title(:bottom_body) %>
+              <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+              <%= presenter.wrapped_html %>
+          <% end %>
         </div>
       </div>
 

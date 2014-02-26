@@ -8,7 +8,10 @@
     <div class="row">
       <div class="col-md-12">
           <div class="headline"><h2><%= @page.title %></h2></div>
-          <%= raw @page.content_for(:body) %>
+        <% if part = @page.part_with_title(:body) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
           <%= render "/refinery/photo_gallery/albums/show" %>
       </div>
     </div>

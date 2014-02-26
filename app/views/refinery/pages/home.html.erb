@@ -7,16 +7,25 @@
 <div class="container">
     <div class="row">
       <div class="col-md-9">
-        <%= raw @page.content_for(:slideshow) %>
+        <% if part = @page.part_with_title(:slideshow) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
       </div>
       <div class="col-md-3">
-        <%= raw @page.content_for(:right_column) %>
+        <% if part = @page.part_with_title(:right_column) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12">
-        <%= raw @page.content_for(:body) %>
+        <% if part = @page.part_with_title(:body) %>
+            <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
+            <%= presenter.wrapped_html %>
+        <% end %>
         <%= render "/refinery/photo_gallery/albums/show" %>
       </div>
     </div>
