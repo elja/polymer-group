@@ -8,11 +8,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <%= link_to Refinery::Core.site_name, refinery.root_path, class: 'navbar-brand' %>
-        <!--<img id="logo-header" src="assets/img/logo1-default.png" alt="Logo">-->
-      </a>
+        <%= link_to refinery.root_path, class: 'navbar-brand' do %>
+            <img id="logo-header" src="<%= image_path('logo.png') %>" title="<%=Refinery::Core.site_name %>"/>
+        <% end %>
     </div>
-
     <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
   </div>
 </div>

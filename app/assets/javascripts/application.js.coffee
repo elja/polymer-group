@@ -9,3 +9,4 @@
 $ ->
   App.init();
   App.initSliders();
+  App.initFancybox();

@@ -123,7 +123,12 @@
 .header .navbar-brand {
 	z-index: 2;
 	position: relative;
-	padding: 0 10px 10px;
+	padding: 0 10px;
+}
+
+.header .navbar-brand img {
+    max-height: 55px;
+    margin-top: -10px;
 }
 
 /*Navbar*/
@@ -270,7 +275,7 @@
 		font-size: 13px;
 		font-weight: 400;
 		padding: 6px 15px;
-		border-bottom: solid 1px #eee;
+		/*border-bottom: solid 1px #eee;*/
 	}
 
 	.header .dropdown-menu .active > a,

@@ -22,28 +22,6 @@ ActiveRecord::Schema.define(:version => 20140202170535) do
   add_index "refinery_album_pages", ["album_id"], :name => "index_refinery_album_pages_on_album_id"
   add_index "refinery_album_pages", ["page_id"], :name => "index_refinery_album_pages_on_page_id"
 
-  create_table "refinery_image_page_translations", :force => true do |t|
-    t.integer  "refinery_image_page_id"
-    t.string   "locale",                 :null => false
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
-    t.text     "caption"
-  end
-
-  add_index "refinery_image_page_translations", ["locale"], :name => "index_refinery_image_page_translations_on_locale"
-  add_index "refinery_image_page_translations", ["refinery_image_page_id"], :name => "index_186c9a170a0ab319c675aa80880ce155d8f47244"
-
-  create_table "refinery_image_pages", :force => true do |t|
-    t.integer "image_id"
-    t.integer "page_id"
-    t.integer "position"
-    t.text    "caption"
-    t.string  "page_type", :default => "page"
-  end
-
-  add_index "refinery_image_pages", ["image_id"], :name => "index_refinery_image_pages_on_image_id"
-  add_index "refinery_image_pages", ["page_id"], :name => "index_refinery_image_pages_on_page_id"
-
   create_table "refinery_image_slides", :force => true do |t|
     t.string   "title"
     t.integer  "position"
