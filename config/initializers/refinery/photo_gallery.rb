@@ -25,7 +25,7 @@ Refinery::PhotoGallery.configure do |config|
   # Thumbs dimensions in pixels. E.g: [950,950] for width:950, height: 950
   # config.album_dimensions = [140, 105]
   config.preview_dimensions = [300, 300]
-  # config.single_dimensions = [900, 900]
+  config.single_dimensions = [900, 900]
 
   # config.collections_per_page = 10
   config.albums_per_page = 16
