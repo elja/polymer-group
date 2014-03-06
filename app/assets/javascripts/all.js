@@ -73,6 +73,16 @@ var App = function () {
                 directionNav: false,
                 move: 2
             });
+
+            $('#layerslider').layerSlider({
+                skinsPath : 'assets/plugins/layer_slider/skins/',
+                skin : 'fullwidth',
+                thumbnailNavigation : 'hover',
+                hoverPrevNext : true,
+                responsive : true,
+                responsiveUnder : 960,
+                sublayerContainer : 960
+            });
         },
 
         initFancybox: function () {
@@ -86,29 +96,6 @@ var App = function () {
                         type: 'inside'
                     }
                 }
-            });
-        },
-
-        initBxSlider: function () {
-            $('.bxslider').bxSlider({
-                minSlides: 4,
-                maxSlides: 4,
-                slideWidth: 360,
-                slideMargin: 10
-            });
-
-            $('.bxslider1').bxSlider({
-                minSlides: 3,
-                maxSlides: 3,
-                slideWidth: 360,
-                slideMargin: 10,
-            });
-
-            $('.bxslider2').bxSlider({
-                minSlides: 2,
-                maxSlides: 2,
-                slideWidth: 360,
-                slideMargin: 10
             });
         }
     };

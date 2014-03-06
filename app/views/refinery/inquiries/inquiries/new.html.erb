@@ -13,6 +13,14 @@
 <div class="container">
   <div class="row margin-bottom-30">
     <div class="col-md-9">
+      <% if page_part = @page.part_with_title(:body) %>
+          <% page_part.snippets.before.each do |snippet| %>
+              <%= raw snippet.body %>
+          <% end %>
+
+          <%= page_part.body %>
+      <% end %>
+
       <div class='inquiries'>
         <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
             <%= render :partial => "/refinery/admin/error_messages",
@@ -73,10 +81,13 @@
   </div>
 
   <div class="row margin-bottom-20">
-    <% if part = @page.part_with_title(:body) %>
-        <% presenter = Refinery::Pages::PagePartSectionPresenter.new(part) %>
-        <%= presenter.wrapped_html %>
-    <% end %>
+    <div class="col-md-12">
+      <% if page_part = @page.part_with_title(:body) %>
+          <% page_part.snippets.after.each do |snippet| %>
+              <%= raw snippet.body %>
+          <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
