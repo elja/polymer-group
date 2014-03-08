@@ -79,9 +79,7 @@ var App = function () {
                 skin : 'fullwidth',
                 thumbnailNavigation : 'hover',
                 hoverPrevNext : true,
-                responsive : true,
-                responsiveUnder : 850,
-                sublayerContainer : 850
+                responsive : true
             });
         },
 
