@@ -33,7 +33,7 @@ var App = function () {
 
     function handleBootstrap() {
         jQuery('.carousel').carousel({
-            interval: 5000,
+            interval: 10000,
             pause: 'hover'
         });
         jQuery('.tooltips').tooltip();
@@ -80,8 +80,8 @@ var App = function () {
                 thumbnailNavigation : 'hover',
                 hoverPrevNext : true,
                 responsive : true,
-                responsiveUnder : 960,
-                sublayerContainer : 960
+                responsiveUnder : 850,
+                sublayerContainer : 850
             });
         },
 
